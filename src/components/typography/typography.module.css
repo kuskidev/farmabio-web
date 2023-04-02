@@ -3,31 +3,25 @@
     src: url('/fonts/geomanist-regular-webfont.ttf');
 }
 
-@font-face {
-    font-family: 'poppins';
-    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap')
-}
-
 .main-text {
     font-family: 'geomanist-regular';
     font-size: 64px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
 }
 
 .h1 {
     font-family: 'geomanist-regular';
-    font-weight: 400;
+    font-weight: 600;
     font-size: 48px;
 }
 
 .h2 {
-    font-family: 'poppins';
-    font-weight: 400;
     font-size: 28px;
 }
 
 .h3 {
-    font-family: 'poppins';
-    font-weight: 400;
     font-size: 16px;
 }
 
@@ -38,7 +32,5 @@
 
 
 .p-regular {
-    font-family: 'poppins';
-    font-weight: 400;
     font-size: 40px;
 }

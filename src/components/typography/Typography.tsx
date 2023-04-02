@@ -1,24 +1,36 @@
 import { TypographyKind } from '@/types/componentTypes';
 import styles from './typography.module.css'
+import { Poppins } from 'next/font/google'
 
 type Props = {
     text: string;
     kind?: TypographyKind;
+    customClass?: string;
+    span?: {
+        text: string;
+        customClass: string;    
+    }
 }
 
-const textStyles = {
-    main: `${styles['main-text']}`,
-    ['headline-1']: `${styles.h1}`,
-    ['headline-2']: `${styles.h2}`,
-    ['headline-3']: `${styles.h3}`,
-    ['p-regular']: `${styles['g-regular']}`,
-    ['g-regular']: `${styles['p-regular']}`
+const regularPoppins = Poppins({weight: '400', subsets: ['latin']})
+// const boldPoppins = Poppins({weight: '600', subsets: ['latin']})
 
-}
 const Typography = (props: Props) => {
+
+    const textStyles = {
+        main: `${styles['main-text']} ${props.customClass}`,
+        ['headline-1']: `${styles.h1}  ${props.customClass}`,
+        ['headline-2']: `${styles.h2} ${regularPoppins.className}  ${props.customClass}`,
+        ['headline-3']: `${styles.h3} ${regularPoppins.className}  ${props.customClass}`,
+        ['p-regular']: `${styles['g-regular']} ${regularPoppins.className}  ${props.customClass}`,
+        ['g-regular']: `${styles['p-regular']}  ${props.customClass}`
+    }
     if(props.kind === TypographyKind.MAIN) {
         return(
             <h1 className={textStyles.main}>
+                <span className={props.span?.customClass}>
+                    {props.span?.text}
+                </span>
                 {props.text}
             </h1>
         )
