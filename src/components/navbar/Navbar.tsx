@@ -15,7 +15,7 @@ type NavbarProps = {
 
 const Navbar: FunctionComponent<NavbarProps> = ({ logoSrc, options }) => {
   return (
-    <nav  className='w-11/12 mx-auto flex flex-row justify-between items-center h-32 mt-5'>
+    <nav  className='w-11/12 mx-auto flex flex-row justify-between items-center h-32'>
         <div style={{width: '411px', height: '105px'}}>
             <Image src={logoSrc} alt='Farmbio' width={411} height={105}/>
         </div>
