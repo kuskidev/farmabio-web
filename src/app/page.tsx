@@ -4,7 +4,7 @@ import styles from './page.module.css'
 import Typography from '@/components/typography/Typography'
 import { TypographyKind } from '@/types/componentTypes'
 import Navbar from '@/components/navbar/Navbar'
-import { mainNavOptions } from '@/data/mainNavOptions'
+import { mainNavOptions } from '@/datos/mainNavOptions'
 import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
